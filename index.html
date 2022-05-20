@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="home" id="home">
+                <div class="nav-bar">
+                    <div class="logo"></div>
+                    <div class="menu" id="menu">
+                        ☰
+                    </div>
+                    <div class="btns" id="btns">
+                        <a href="#home" class="btn" id="a1">Home</a>
+                        <a href="#product" class="btn" id="a2">Products</a>
+                        <a href="#contact" class="btn" id="a3">Contact us</a>
+                    </div>
+                </div>
+                <p class="text">Be the change you want to see in the world: Reduce, Reuse, Recycle.</p>
+            </div>
+            <div class="product" id="product"></div>
+            <div class="contact" id="contact">
+                 <form class="contactform">
+                    <h2 class="contacttitle">Contact us</h2>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="email">
+                    <input type="text" placeholder="Phone no">
+                    <textarea class="msg" placeholder="Enter the message"></textarea>
+                    <input type="submit" value="Send" class="send">
+                 </form>
+                <div class="contactinfo">
+                <pre class="Details">
+                    Got pollution? Be the solution!…RECYCLE.
+
+                    Happiness is recycling.
+                    
+                    Have you hugged your recycle bin today?
+                    
+                    I am a mean, green, recycling machine.  
+                </pre>
+            </div>
+            </div>
+        </div>
+        <script>
+            let btns=document.getElementById('btns');
+            let menu=document.getElementById('menu');
+            let home=document.getElementById('a1');
+            let product=document.getElementById('a2');
+            let contact=document.getElementById('a3');
+            let signin=document.getElementById('a4');
+            menu.onclick=function()
+            {
+                btns.classList.toggle('active');
+            }
+            home.onclick=product.onclick=contact.onclick=signin.onclick=function()
+            {
+                btns.classList.remove('active');
+            }
+        </script>
+    </body>
+</html>

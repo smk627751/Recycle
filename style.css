@@ -1,0 +1,260 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: sans-serif,'Poppins';
+}
+html
+{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+  width: 0px;
+  scroll-behavior: smooth;
+}
+.container
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.home
+{
+  position: relative;
+  width: 100%;
+  height: 750px;
+  background: url(bg1.jpg);
+  background-size: cover;
+}
+.nav-bar
+{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(36, 172, 20);
+    z-index: 2;
+}
+.logo
+{
+    position: absolute;
+    top: -60px;
+    left: -50px;
+    width: 180px;
+    height: 170px;
+    background: url(logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0.2);
+    filter: invert();
+}
+.menu
+{
+  position: absolute;
+  color: #fff;
+  font-size: 25px;
+  transition: 0.5s;
+  top: 5px;
+  right: 10px;
+  display: none;
+  cursor: pointer;
+}
+.btns
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 50px;
+    transition: 0.5s;
+}
+.btn
+{
+  height: 50px;
+  width: 60%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover
+{
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
+}
+.text
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  text-shadow: 10px 5px 5px rgb(0, 0, 0, 0.6);
+}
+.product
+{
+    width: 100%;
+    height: 750px;
+    background: url(bg2.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    transition: 0.5s;
+}
+.contact
+{
+    position: relative;  
+    width: 100%;
+    height: 650px;
+    background: url(bg3.jpg);
+    background-color: rgba(0,0,0,0.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.contactform
+{
+  position: relative;
+  left: 5px;
+  width: 450px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input,textarea
+{
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 30px;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(43, 42, 43, 0.151);
+}
+textarea
+{
+  resize: none;
+}
+input:focus,textarea:focus
+{
+  border-bottom: 1px solid rgb(8, 121, 57);
+}
+.send
+{
+  width: 40%;
+  height: 40px;
+  background-color: rgb(27, 172, 4);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.contactinfo
+{
+  position: relative;
+  top: 120px;
+  right: -160px;
+  width: 50%;
+  height: 900px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(0, 255, 72);
+  font-size: 1.25rem;
+}
+pre
+{
+  position: relative;
+  top: -130px;
+  left: -160px;
+  font-size: 25px;
+  font-family: sans-serif,"Poppins";
+}
+@media (max-width:700px)
+{
+  .home
+  {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .text
+ {
+  font-size: 2.5rem;
+  font-weight: 600;
+ }
+ .menu
+ {
+   display: block;
+ }
+ .btns
+ {
+  position: absolute;
+  top: -180px;
+  width: 100%;
+  height: 0px;
+  background-color: #000;
+  flex-direction: column;
+  z-index: -1;
+ }
+ .btns.active
+  {
+   height: 850px;
+  }
+ .btn
+ {
+   font-size: 1.5em;
+ }
+ .product
+ {
+   background-size: 90%;
+ }
+ .contact
+ {
+   flex-direction: column;
+   height: 1050px;
+ }
+ .contactform
+ {
+  top:60px;
+  left: 0px; 
+  width: 350px;
+  height: 400px;
+ }
+ .contactinfo
+ {
+  width: 100%;
+  left: 0px;
+  background-color: #fff;
+  color: #000;
+ }
+ pre
+ {
+  top:-90px ;
+  left: -50px;
+  font-size: 20px;
+ }
+}
